@@ -16,7 +16,6 @@
 
 package tw.qtlin.mac.airunlocker;
 
-import com.example.android.fingerprintdialog.R;
 import com.google.common.annotations.VisibleForTesting;
 
 import android.hardware.fingerprint.FingerprintManager;

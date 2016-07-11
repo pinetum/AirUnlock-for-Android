@@ -5,8 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.preference.PreferenceManager;
 
-import com.example.android.fingerprintdialog.R;
-
 /**
  * Created by QT on 2016/7/8.
  */
