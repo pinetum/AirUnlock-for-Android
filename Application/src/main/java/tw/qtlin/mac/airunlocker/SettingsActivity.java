@@ -28,7 +28,6 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.widget.Toast;
 
-import com.example.android.fingerprintdialog.R;
 
 public class SettingsActivity extends Activity{
 
