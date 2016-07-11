@@ -45,7 +45,7 @@ Screenshots
 
 Bugs
 -------------
-- [Some device will crash when relaunch  Scan QRcode activity.](https://github.com/dm77/barcodescanner/issues/187)
+- [Some devices will crash when relaunch  Scan QRcode activity.](https://github.com/dm77/barcodescanner/issues/187)
 
 License
 -------
