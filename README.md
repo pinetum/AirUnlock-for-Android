@@ -5,7 +5,7 @@ AirUnlock (Android)
 
 Introduction
 ------------
-Using android phone establish a connection with your Mac via Bluetooth low-energy (BLE), control Mac lock state (Lock or Unlock).
+Using android phone establishs a connection with your Mac via Bluetooth low-energy (BLE), control Mac lock state (Lock or Unlock).
 #### Features
 - Store the password in Mac system keychain.
 - Send the UUID for lock/unlock Macbook. (other people can't control your mac)
