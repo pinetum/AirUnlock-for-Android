@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:key="@string/use_fingerprint_to_authenticate_key"
+        android:title="@string/use_fingerprint_to_authenticate_title"
+        android:defaultValue="false" />
+
+    <SwitchPreference
+        android:key="@string/start_on_bootup_key"
+        android:title="@string/start_on_bootup"
+        android:defaultValue="true" />
+    <PreferenceCategory android:key="@string/connected_notify_key" android:summary="@string/connected_notify_summary" android:title="@string/connected_notify">
+        <SwitchPreference
+            android:key="@string/notification_sound_key"
+            android:title="@string/notification_sound"
+            android:defaultValue="true" />
+        <SwitchPreference
+            android:key="@string/notification_vibrate_key"
+            android:title="@string/notification_vibrate"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

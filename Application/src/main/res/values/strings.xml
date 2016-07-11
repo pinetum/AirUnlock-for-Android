@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="action_settings">Setting</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="fingerprint_description">Fingerprint authorization</string>
+    <string name="fingerprint_hint">Touch sensor</string>
+    <string name="unlock">Unlock</string>
+    <string name="lock">Lock</string>
+    <string name="fingerprint_not_recognized">Authorization fail, please retry.</string>
+    <string name="fingerprint_success">Authorization success.</string>
+    <string name="item_info_title">UnLock your Mac</string>
+    <string name="item_info_content">This App establish a connection with your Mac via Bluetooth low-energy (BLE), wireless control Mac lock state.\n Please click on the Settings button to see more features.\n Please performs AirUnlock Mac application, and turn on bluetooth.</string>
+    <string name="use_fingerprint_to_authenticate_title">Authorization with fingerprint</string>
+    <string name="use_fingerprint_to_authenticate_key" >use_fingerprint_to_authenticate_key</string>
+    <string name="start_on_bootup">Start at boot up</string>
+    <string name="start_on_bootup_key" >start_on_bootup_key</string>
+    <string name="notification_sound">sound</string>
+    <string name="notification_vibrate" >vibrate</string>
+    <string name="notification_sound_key">notification_sound</string>
+    <string name="notification_vibrate_key" >notification_vibrate</string>
+    <string name="scan_key_qrcode">Scan QR code</string>
+    <string name="fingerprint_description_enroll" >Please at least set one fingerprint.</string>
+    <string name="service_starting">Starting AirUnlock...</string>
+    <string name="bluetooth_off">Bluetooth is turned off</string>
+    <string name="bluetooth_scan_failed">Scanning fails, make sure Mac connection within range , or re-scan QR code.</string>
+    <string name="bluetooth_scanning">Looking for a Mac</string>
+    <string name="bluetooth_scan_not_found">Can not find Mac</string>
+    <string name="bluetooth_device_connected">Connecting to AirUnlock</string>
+    <string name="bluetooth_service_connected">AirUnlock connected</string>
+    <string name="bluetooth_disconnected">Mac disconnected</string>
+    <string name="unlock_info_not_set">AirUnlock unpaired, please scan the QR-code</string>
+    <string name="pair_with_macbook">Scan the QR code</string>
+    <string name="connected_notify_key">connected_notify_key</string>
+    <string name="connected_notify">AirUnlock connected notification</string>
+    <string name="connected_notify_summary">AirUnlock connected notification</string>
+    <string name="go_to_set_fingerprint">Go to Settings -> Security -> Fingerprint and register at least one fingerprint</string>
+</resources>

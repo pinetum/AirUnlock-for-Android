@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.android.fingerprintdialog"
+          android:versionCode="1"
+          android:versionName="1.0"
+          android:installLocation="internalOnly" >
+
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-feature android:name="android.hardware.fingerprint"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
+    <application
+            android:name="tw.qtlin.mac.airunlocker.InjectedApplication"
+            android:allowBackup="true"
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher"
+            android:theme="@style/AppTheme">
+        <receiver
+            android:enabled="true"
+            android:name="tw.qtlin.mac.airunlocker.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="tw.qtlin.mac.airunlocker.MainActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="tw.qtlin.mac.airunlocker.OverlayActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+        <service android:name="tw.qtlin.mac.airunlocker.BLEService" />
+        <activity
+            android:name="tw.qtlin.mac.airunlocker.SettingsActivity"
+            android:label="@string/action_settings" />
+        <activity android:name="tw.qtlin.mac.airunlocker.SimpleScannerActivity"
+            android:label="@string/scan_key_qrcode"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,8 @@
+
+
+<resources>
+
+    <!-- Activity themes -->
+    <style name="Theme.Base" parent="android:Theme.Holo.Light" />
+
+</resources>
