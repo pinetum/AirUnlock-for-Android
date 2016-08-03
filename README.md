@@ -27,7 +27,7 @@ Requirement
 Getting Started
 ---------------
 - [Download AirUnlock for MacOS.](https://github.com/pinetum/AirUnlock-for-Mac/releases/download/0.4/AirUnlock_mac_0.4.zip) ([or build from source](https://github.com/pinetum/AirUnlock-for-Mac))
-- [Download AirUnlock Android client.](https://github.com/pinetum/AirUnlock-for-Android/releases/download/1.0/AirUnlock_v1.0.release.zip) ([or build from source](https://github.com/pinetum/AirUnlock-for-Android))
+- Download AirUnlock Android client from [F-Droid](https://f-droid.org/app/tw.qtlin.mac.airunlocker), [Github](https://github.com/pinetum/AirUnlock-for-Android/releases/download/1.0/AirUnlock_v1.0.release.zip) or [build from source](https://github.com/pinetum/AirUnlock-for-Android)  
 - Launch AirUnlock on mac and turn on Bluetooth.
 - Set up your password.
 - Generate a QR-code for android mobile.
