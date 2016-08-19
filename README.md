@@ -3,6 +3,11 @@ AirUnlock (Android)
 ===================================
 <img src="screenshots/logo.png" height="300" alt="Screenshot"/> 
 
+
+<a href="https://f-droid.org/repository/browse/?fdfilter=airunlock&fdid=tw.qtlin.mac.airunlocker" alt="Airunlock on fdroid.org">
+  <img src="https://f-droid.org/wiki/images/fdroid-135.png" width="80" height="80" >
+</a>
+
 Introduction
 ------------
 Using android phone to establish a connection with your Mac via Bluetooth low-energy (BLE), controlling Mac lock state (Lock or Unlock).
