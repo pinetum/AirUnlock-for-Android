@@ -30,6 +30,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.RemoteViews;
 
 import java.util.ArrayList;
@@ -75,6 +76,9 @@ public class BLEService extends Service
     private int lastIntentReq = -1;
     private boolean bForeground = false;
     private boolean bUsingFingerprint = false;
+    private Boolean m_BshowExitBtn = true;
+    private Boolean m_BshowLockBtn = true;
+    private Boolean m_BshowUnlockBtn = true;
     private STATE state;
 
     private SharedPreferences mSharedPreferences;
@@ -85,7 +89,6 @@ public class BLEService extends Service
         @Override
         public void onReceive(Context context, Intent intent) {
             lastIntentReq = intent.getIntExtra("REQUEST_CODE",-1);
-            mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
             bUsingFingerprint = mSharedPreferences
                     .getBoolean(getString(R.string.use_fingerprint_to_authenticate_key), false)
                     && BLEService.checkFingerPrintAvailable(getApplicationContext())
@@ -120,7 +123,15 @@ public class BLEService extends Service
         return useWhiteIcon ? R.drawable.ic_w_unlock : R.drawable.ic_s_unlock;
     }
     private void createRemoteView(){
+
         ctlViews = new RemoteViews(getPackageName(), R.layout.bgnotification);
+        if(!m_BshowExitBtn)
+            ctlViews.setViewVisibility(R.id.notify_btn_exit, View.GONE);
+        if(!m_BshowLockBtn)
+            ctlViews.setViewVisibility(R.id.notify_btn_lock, View.GONE);
+        if(!m_BshowUnlockBtn)
+            ctlViews.setViewVisibility(R.id.notify_btn_unlock, View.GONE);
+
 
         ctlViews.setOnClickPendingIntent(R.id.notify_btn_exit,
                 PendingIntent.getBroadcast(
@@ -202,11 +213,17 @@ public class BLEService extends Service
         }
         createRemoteView();
         if(uiEnable){
-            ctlViews.setInt(R.id.notify_btn_lock, "setVisibility", View.VISIBLE);
-            ctlViews.setInt(R.id.notify_btn_unlock, "setVisibility", View.VISIBLE);
+            if(m_BshowLockBtn)
+                ctlViews.setViewVisibility(R.id.notify_btn_lock, View.VISIBLE);
+            else
+                ctlViews.setViewVisibility(R.id.notify_btn_lock, View.GONE);
+            if(m_BshowUnlockBtn)
+                ctlViews.setViewVisibility(R.id.notify_btn_unlock, View.VISIBLE);
+            else
+                ctlViews.setViewVisibility(R.id.notify_btn_unlock, View.GONE);
         } else {
-            ctlViews.setInt(R.id.notify_btn_lock, "setVisibility", View.GONE);
-            ctlViews.setInt(R.id.notify_btn_unlock, "setVisibility", View.GONE);
+            ctlViews.setViewVisibility(R.id.notify_btn_lock, View.GONE);
+            ctlViews.setViewVisibility(R.id.notify_btn_unlock, View.GONE);
         }
         if(s == STATE.SERVICE_CONNECTED || s == STATE.UNLOCK_INFO_NOT_SETED)
         {
@@ -250,7 +267,10 @@ public class BLEService extends Service
         GATT_ADDRESS = settings.getString(PERFRENCE_ADDRESS, "");
         KEY_WORD_UNLOCK = settings.getString(PERFRENCE_KEY, "");
         KEY_WORD_LOCK = settings.getString(PERFRENCE_KEY_LOCK, "");
-
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        m_BshowExitBtn = mSharedPreferences.getBoolean(getString(R.string.notification_show_exit_btn_key), true);
+        m_BshowLockBtn = mSharedPreferences.getBoolean(getString(R.string.notification_show_lock_btn_key), true);
+        m_BshowUnlockBtn = mSharedPreferences.getBoolean(getString(R.string.notification_show_unlock_btn_key), true);
 
         if (mBluetoothAdapter == null || !mBluetoothAdapter.isEnabled()) {
             updateState(STATE.BT_OFF);

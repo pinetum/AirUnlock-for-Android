@@ -11,7 +11,7 @@ import android.preference.PreferenceManager;
 public class BootBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        Boolean bStart = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(context.getString(R.string.start_on_bootup_key),
+        Boolean bStart = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(context.getString(R.string.start_at_startup_key),
                         false);
 
 

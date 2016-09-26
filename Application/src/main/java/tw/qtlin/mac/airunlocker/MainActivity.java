@@ -97,36 +97,6 @@ public class MainActivity extends Activity {
                 startActivity(getIntent());
             }
         });
-
-
-
-
-
-
-
-//        if (!mKeyguardManager.isKeyguardSecure()) {
-//            // Show a message that the user hasn't set up a fingerprint or lock screen.
-//            Toast.makeText(this,
-//                    "Secure lock screen hasn't set up.\n"
-//                            + "Go to 'Settings -> Security -> Fingerprint' to set up a fingerprint",
-//                    Toast.LENGTH_LONG).show();
-//            unlockButton.setEnabled(false);
-//            Intent i = new Intent(DevicePolicyManager.ACTION_SET_NEW_PASSWORD);
-//            startActivity(i);
-//            return;
-//        }
-
-//        //noinspection ResourceType
-//        if (!mFingerprintManager.hasEnrolledFingerprints()) {
-//            unlockButton.setEnabled(false);
-//            // This happens when no fingerprints are registered.
-//            Toast.makeText(this,
-//                    "Go to 'Settings -> Security -> Fingerprint' and register at least one fingerprint",
-//                    Toast.LENGTH_LONG).show();
-//            return;
-//        }
-
-
     }
 
 

@@ -7,10 +7,12 @@
         android:defaultValue="false" />
 
     <SwitchPreference
-        android:key="@string/start_on_bootup_key"
-        android:title="@string/start_on_bootup"
+        android:key="@string/start_at_startup_key"
+        android:title="@string/start_at_startup"
         android:defaultValue="true" />
-    <PreferenceCategory android:key="@string/connected_notify_key" android:summary="@string/connected_notify_summary" android:title="@string/connected_notify">
+    <PreferenceCategory android:key="@string/connected_notify_key"
+        android:summary="@string/connected_notify_summary"
+        android:title="@string/connected_notify">
         <SwitchPreference
             android:key="@string/notification_sound_key"
             android:title="@string/notification_sound"
@@ -19,5 +21,22 @@
             android:key="@string/notification_vibrate_key"
             android:title="@string/notification_vibrate"
             android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:key="@string/notify_buttons_key"
+        android:summary="@string/notify_buttons_summary"
+        android:title="@string/notify_buttons">
+        <SwitchPreference
+            android:key="@string/notification_show_exit_btn_key"
+            android:title="@string/notification_show_exit_btn"
+            android:defaultValue="true" />
+        <SwitchPreference
+            android:key="@string/notification_show_lock_btn_key"
+            android:title="@string/notification_show_lock_btn"
+            android:defaultValue="true" />
+        <SwitchPreference
+            android:key="@string/notification_show_unlock_btn_key"
+            android:title="@string/notification_show_unlock_btn"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 </PreferenceScreen>

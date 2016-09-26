@@ -18,6 +18,7 @@ package tw.qtlin.mac.airunlocker;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.ListPreference;
@@ -89,6 +90,10 @@ public class SettingsActivity extends Activity{
         public void onPause() {
             super.onPause();
             getPreferenceManager().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(mListener);
+            Intent updateService = new Intent()
+                    .setAction("android.intent.action.airunlockmac")
+                    .putExtra("REQUEST_CODE", BLEService.INTENT_UPDATE_UNLOCK_INFO);
+            getActivity().sendBroadcast(updateService);
         }
     }
 }
