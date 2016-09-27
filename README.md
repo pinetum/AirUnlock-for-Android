@@ -5,7 +5,7 @@ AirUnlock (Android)
 
 
 <a href="https://f-droid.org/repository/browse/?fdfilter=airunlock&fdid=tw.qtlin.mac.airunlocker" alt="Airunlock on fdroid.org">
-  <img src="https://f-droid.org/wiki/images/fdroid-135.png" width="80" height="80" >
+  <img src="https://f-droid.org/badge/get-it-on.png" width="327" height="126" >
 </a>
 
 Introduction
