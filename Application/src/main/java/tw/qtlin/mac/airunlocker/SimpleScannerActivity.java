@@ -42,7 +42,7 @@ public class SimpleScannerActivity extends Activity implements ZBarScannerView.R
 
 
         if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.READ_CONTACTS)
+                Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED) {
 
 
