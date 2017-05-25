@@ -340,7 +340,7 @@ public class BLEService extends Service
     private void connect2GattService(){
         updateState(STATE.DEVICE_CONNECTED);
         mBluetoothLeScanner.stopScan(mDeviceScanCallback);
-        mLeDevice.connectGatt(getApplicationContext(), true, mDeviceGattCallBack);
+        mLeDevice.connectGatt(getApplicationContext(), true, mDeviceGattCallBack, BluetoothDevice.TRANSPORT_LE);
 
     }
     @Override
