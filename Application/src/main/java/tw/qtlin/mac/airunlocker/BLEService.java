@@ -330,7 +330,7 @@ public class BLEService extends Service
                 mBluetoothLeScanner.startScan(mLeFilter,
                         new ScanSettings.Builder().
                                 setScanMode(ScanSettings.SCAN_MODE_LOW_POWER).
-                                setCallbackType(ScanSettings.CALLBACK_TYPE_FIRST_MATCH).
+                                setCallbackType(ScanSettings.CALLBACK_TYPE_ALL_MATCHES).
                                 build(),
                         mDeviceScanCallback);
             }
