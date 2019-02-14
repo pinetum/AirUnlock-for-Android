@@ -95,10 +95,7 @@ public class BLEService extends Service
                     && BLEService.checkFingerPrintSensor(getApplicationContext());
             switch (lastIntentReq){
                 case INTENT_REQ_LOCK:
-                    if(!bUsingFingerprint)
-                        doLockScreen();
-                    else
-                        showOverlayActivity(context, INTENT_REQ_LOCK);
+                    doLockScreen();
                     break;
                 case INTENT_REQ_UNLOCK:
                     if(!bUsingFingerprint)
