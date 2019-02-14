@@ -57,8 +57,9 @@ public class SettingsActivity extends Activity{
             fingerprintAuthSwitch = (SwitchPreference)findPreference(getString(R.string.use_fingerprint_to_authenticate_key));
             // check fingerprint sensor is ok ?
             if(!BLEService.checkFingerPrintSensor(getActivity())){
+                //turn off the switch
+                fingerprintAuthSwitch.setChecked(false);
                 //remove it!
-
                 getPreferenceScreen().removePreference(fingerprintAuthSwitch);
             }
             mListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
